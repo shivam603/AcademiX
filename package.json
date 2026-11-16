@@ -1,7 +1,7 @@
 {
-  "name": "course-registration-system",
+  "name": "academix",
   "version": "1.0.0",
-  "description": "Production-grade Course Registration and Academic Management System (ADBMS Project)",
+  "description": "AcademiX: High-Concurrency Course Registration & Academic Management System with ACID Row-Locking (ADBMS Project)",
   "scripts": {
     "start": "node server/server.js",
     "build": "cd client && npm install && npm run build && cd ../server && npm install",

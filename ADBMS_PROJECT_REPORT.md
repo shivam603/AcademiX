@@ -428,9 +428,9 @@ The user interface is designed with React 19, Tailwind CSS, and Lucide React ico
 
 | DEPLOYMENT RESOURCE / REPOSITORY | VERIFIED URL / SPECIFICATION |
 | :--- | :--- |
-| **GitHub Source Code Repository** | https://github.com/shivam603/course-registration-system |
-| **Live Cloud Web Service (Render)** | https://course-registration-system.onrender.com/ |
-| **Managed PostgreSQL Cloud Instance** | course-reg-db (PostgreSQL 16 Engine on Render Cloud) |
+| **GitHub Source Code Repository** | https://github.com/shivam603/AcademiX |
+| **Live Cloud Web Service (Render)** | https://academix.onrender.com/ |
+| **Managed PostgreSQL Cloud Instance** | academix-db (PostgreSQL 16 Engine on Render Cloud) |
 | **Infrastructure as Code Blueprint** | `render.yaml` (Automated multi-service provisioning) |
 | **Pre-Deployment Migration Hook** | `npm run db:init` (Cross-platform Node.js DDL/DML runner) |
 
