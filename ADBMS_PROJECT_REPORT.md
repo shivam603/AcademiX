@@ -6,7 +6,6 @@
 ## A SEMESTER CAPSTONE PROJECT REPORT
 Submitted by:
 **SHIVAM RAY (UID: 24BCC70014)**  
-**DEVESH CHOUDHRY (UID: 24BCC70028)**  
 
 in partial fulfilment for the award of the degree of  
 **BACHELOR OF ENGINEERING IN COMPUTER SCIENCE (CLOUD COMPUTING)**  
@@ -28,11 +27,11 @@ Department of Computer Science and Engineering
 
 ### BONAFIDE CERTIFICATE
 
-Certified that this project report titled **"COURSE REGISTRATION AND ACADEMIC MANAGEMENT SYSTEM: A High-Concurrency Relational Database Engine with ACID Row-Locking, PL/pgSQL Automation & Enterprise Audit Integrity"** is the bonafide work of **SHIVAM RAY (UID: 24BCC70014)** and **DEVESH CHOUDHRY (UID: 24BCC70028)** who carried out the project work under my/our supervision for the course **Advanced Database Management Systems (24CSP-332)** during the 5th Semester of Bachelor of Engineering in Computer Science (Cloud Computing) for the academic batch 2024–2028 at Chandigarh University, Gharuan, Mohali, Punjab.
+Certified that this project report titled **"COURSE REGISTRATION AND ACADEMIC MANAGEMENT SYSTEM: A High-Concurrency Relational Database Engine with ACID Row-Locking, PL/pgSQL Automation & Enterprise Audit Integrity"** is the bonafide work of **SHIVAM RAY (UID: 24BCC70014)** who carried out the project work under my/our supervision for the course **Advanced Database Management Systems (24CSP-332)** during the 5th Semester of Bachelor of Engineering in Computer Science (Cloud Computing) for the academic batch 2024–2028 at Chandigarh University, Gharuan, Mohali, Punjab.
 
 The project demonstrates rigorous adherence to relational normalization principles (3NF/BCNF), pessimistic concurrency isolation via `SELECT ... FOR UPDATE`, server-side procedural automation using PL/pgSQL functions and autonomous stored procedures, active declarative triggers, materialized views, and full forensic audit logging. This work is authentic and has not been submitted previously to any other university or institution.
 
-| **Mr. Abhishek Thakur**<br>SUPERVISOR<br>Assistant Professor, Department of CSE<br>Chandigarh University, Gharuan, Mohali | **Dr. Aman Kaushik**<br>HEAD OF DEPARTMENT<br>Department of CSE / Cloud Computing<br>Chandigarh University, Gharuan, Mohali |
+| **Mr. Arul Kumar**<br>SUPERVISOR<br>Assistant Professor, Department of CSE<br>Chandigarh University, Gharuan, Mohali | **Dr. Aman Kaushik**<br>HEAD OF DEPARTMENT<br>Department of CSE / Cloud Computing<br>Chandigarh University, Gharuan, Mohali |
 | :--- | :--- |
 | <br>____________________________________<br>**INTERNAL EXAMINER**<br>Date: _____ / _____ / 2026 | <br>____________________________________<br>**EXTERNAL EXAMINER**<br>Date: _____ / _____ / 2026 |
 
@@ -439,7 +438,7 @@ The user interface is designed with React 19, Tailwind CSS, and Lucide React ico
 
 ## 11. PRESENTATION SLIDES (10-SLIDE COMPREHENSIVE VIVA DECK)
 
-- **Slide 1: Title Slide**: Course Registration & Academic Management System | Advanced DBMS (24CSP-332) | Shivam Ray (24BCC70014) & Devesh Choudhry (24BCC70028).
+- **Slide 1: Title Slide**: Course Registration & Academic Management System | Advanced DBMS (24CSP-332) | Shivam Ray (UID: 24BCC70014) | Supervisor: Mr. Arul Kumar.
 - **Slide 2: Motivation & The Overbooking Problem**: Why naive web apps fail under concurrent course drops and adds; real-world data loss and lost update anomalies.
 - **Slide 3: Relational Architecture & Normalization**: 15 tables normalized to 3NF/BCNF; formal dependency preservation; junction table architectures.
 - **Slide 4: ACID Concurrency & Row-Level Locking**: Implementation of `SELECT ... FOR UPDATE`; lock acquisition sequence; blocking behavior under high contention.

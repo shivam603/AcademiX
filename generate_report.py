@@ -113,7 +113,7 @@ def main():
     r_subm.font.size = Pt(11)
     r_subm.font.bold = True
 
-    r_auth = p_subm.add_run("SHIVAM RAY (UID: 24BCC70014)\nDEVESH CHOUDHRY (UID: 24BCC70028)\n")
+    r_auth = p_subm.add_run("SHIVAM RAY (UID: 24BCC70014)\n")
     r_auth.font.name = "Arial"
     r_auth.font.size = Pt(13)
     r_auth.font.bold = True
@@ -151,7 +151,7 @@ def main():
     r_cb = p_cert_body.add_run(
         "Certified that this project report titled \"COURSE REGISTRATION AND ACADEMIC MANAGEMENT SYSTEM: "
         "A High-Concurrency Relational Engine with ACID Row-Locking, PL/pgSQL Automation & Enterprise Audit Integrity\" "
-        "is the bonafide work of SHIVAM RAY (UID: 24BCC70014) and DEVESH CHOUDHRY (UID: 24BCC70028) "
+        "is the bonafide work of SHIVAM RAY (UID: 24BCC70014) "
         "who carried out the project work under my/our supervision for the course Advanced Database Management Systems "
         "(24CSP-332) during the 5th Semester of Bachelor of Engineering in Computer Science (Cloud Computing) "
         "for the academic batch 2024–2028 at Chandigarh University, Gharuan, Mohali, Punjab.\n\n"
@@ -170,7 +170,7 @@ def main():
     table_sig.autofit = False
 
     sig_cells = [
-        ("Mr. Abhishek Thakur\nSUPERVISOR\nAssistant Professor, CSE\nChandigarh University, Mohali",
+        ("Mr. Arul Kumar\nSUPERVISOR\nAssistant Professor, CSE\nChandigarh University, Mohali",
          "Dr. Aman Kaushik\nHEAD OF DEPARTMENT\nDepartment of CSE / CC\nChandigarh University, Mohali"),
         ("_____________________________\nINTERNAL EXAMINER\nDate: ____ / ____ / 2026",
          "_____________________________\nEXTERNAL EXAMINER\nDate: ____ / ____ / 2026")
@@ -927,7 +927,7 @@ def main():
     r.font.color.rgb = COLOR_NAVY
 
     slides_data = [
-        ("Slide 1: Title Slide", "Course Registration & Academic Management System | Advanced DBMS (24CSP-332) | Shivam Ray (24BCC70014) & Devesh Choudhry (24BCC70028)."),
+        ("Slide 1: Title Slide", "Course Registration & Academic Management System | Advanced DBMS (24CSP-332) | Shivam Ray (UID: 24BCC70014) | Supervisor: Mr. Arul Kumar."),
         ("Slide 2: Motivation & The Overbooking Problem", "Why naive web apps fail under concurrent course drops and adds; real-world data loss and lost update anomalies."),
         ("Slide 3: Relational Architecture & Normalization", "15 tables normalized to 3NF/BCNF; formal dependency preservation; junction table architectures."),
         ("Slide 4: ACID Concurrency & Row-Level Locking", "Implementation of SELECT ... FOR UPDATE; lock acquisition sequence; blocking behavior under high contention."),
