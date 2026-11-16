@@ -1,6 +1,8 @@
 // ============================================================
 // src/app.js - Express Application Entry Point
 // ============================================================
+const path = require('path');
+require('dotenv').config({ path: path.join(__dirname, '../.env') });
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
@@ -79,7 +81,6 @@ app.get('/health', (req, res) => {
 });
 
 // Serve frontend static assets if built (production / preview mode)
-const path = require('path');
 const fs = require('fs');
 const clientDist = path.resolve(__dirname, '../../client/dist');
 if (fs.existsSync(clientDist)) {

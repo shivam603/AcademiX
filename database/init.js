@@ -4,8 +4,15 @@
 // ============================================================
 const fs = require('fs');
 const path = require('path');
-const { Client } = require('pg');
-require('dotenv').config({ path: path.join(__dirname, '../server/.env') });
+let Client, dotenv;
+try {
+  Client = require('pg').Client;
+  dotenv = require('dotenv');
+} catch (e) {
+  Client = require(path.join(__dirname, '../server/node_modules/pg')).Client;
+  dotenv = require(path.join(__dirname, '../server/node_modules/dotenv'));
+}
+dotenv.config({ path: path.join(__dirname, '../server/.env') });
 
 function getSSLConfig(url) {
   if (!url) return false;
