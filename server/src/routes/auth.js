@@ -14,6 +14,8 @@ const loginValidation = [
   body('password').isLength({ min: 6 }).withMessage('Password min 6 chars')
 ];
 
+const JWT_SECRET = process.env.JWT_SECRET || 'academix_super_secret_university_jwt_key_2026';
+
 // POST /api/auth/login
 router.post('/login', loginValidation, async (req, res, next) => {
   try {
@@ -57,7 +59,7 @@ router.post('/login', loginValidation, async (req, res, next) => {
 
     const token = jwt.sign(
       { id: user.id, email: user.email, role: user.role },
-      process.env.JWT_SECRET,
+      JWT_SECRET,
       { expiresIn: process.env.JWT_EXPIRES_IN || '24h' }
     );
 
@@ -109,7 +111,7 @@ router.post('/register', [
 
     const token = jwt.sign(
       { id: newUser.id, email: newUser.email, role: newUser.role },
-      process.env.JWT_SECRET,
+      JWT_SECRET,
       { expiresIn: '24h' }
     );
 

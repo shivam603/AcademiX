@@ -7,12 +7,21 @@ const path = require('path');
 const { Client } = require('pg');
 require('dotenv').config({ path: path.join(__dirname, '../server/.env') });
 
+function getSSLConfig(url) {
+  if (!url) return false;
+  if (url.includes('localhost') || url.includes('127.0.0.1')) return false;
+  if (url.includes('.internal') || (url.includes('dpg-') && !url.includes('.render.com'))) {
+    return false;
+  }
+  return { rejectUnauthorized: false };
+}
+
 async function initDb() {
   const databaseUrl = process.env.DATABASE_URL;
   const config = databaseUrl
     ? {
         connectionString: databaseUrl,
-        ssl: databaseUrl.includes('localhost') ? false : { rejectUnauthorized: false },
+        ssl: getSSLConfig(databaseUrl),
       }
     : {
         host: process.env.DB_HOST || 'localhost',

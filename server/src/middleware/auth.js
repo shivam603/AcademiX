@@ -22,7 +22,8 @@ const authenticate = async (req, res, next) => {
       return res.status(401).json({ success: false, message: 'Authentication required' });
     }
 
-    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    const JWT_SECRET = process.env.JWT_SECRET || 'academix_super_secret_university_jwt_key_2026';
+    const decoded = jwt.verify(token, JWT_SECRET);
 
     // Verify user still exists and is active
     const { rows } = await query(

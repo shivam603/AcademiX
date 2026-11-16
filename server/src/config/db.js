@@ -3,10 +3,20 @@
 // ============================================================
 const { Pool } = require('pg');
 
+function getSSLConfig(url) {
+  if (!url) return false;
+  if (url.includes('localhost') || url.includes('127.0.0.1')) return false;
+  // Render internal databases (dpg-* or .internal) do not support SSL
+  if (url.includes('.internal') || (url.includes('dpg-') && !url.includes('.render.com'))) {
+    return false;
+  }
+  return { rejectUnauthorized: false };
+}
+
 const poolConfig = process.env.DATABASE_URL
   ? {
       connectionString: process.env.DATABASE_URL,
-      ssl: process.env.DATABASE_URL.includes('localhost') ? false : { rejectUnauthorized: false },
+      ssl: getSSLConfig(process.env.DATABASE_URL),
       max: parseInt(process.env.DB_POOL_MAX) || 20,
       idleTimeoutMillis: 30000,
       connectionTimeoutMillis: 10000,
@@ -14,7 +24,7 @@ const poolConfig = process.env.DATABASE_URL
   : {
       host:     process.env.DB_HOST     || 'localhost',
       port:     parseInt(process.env.DB_PORT) || 5432,
-      database: process.env.DB_NAME     || 'course_registration',
+      database: process.env.DB_NAME     || 'academix',
       user:     process.env.DB_USER     || 'postgres',
       password: process.env.DB_PASSWORD || 'postgres',
       max:      parseInt(process.env.DB_POOL_MAX)  || 20,
