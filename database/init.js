@@ -98,7 +98,11 @@ async function initDb() {
   await client.end();
 }
 
-initDb().catch((err) => {
-  console.error('❌ Database initialization failed:', err);
-  process.exit(1);
-});
+if (require.main === module) {
+  initDb().catch((err) => {
+    console.error('❌ Database initialization failed:', err);
+    process.exit(1);
+  });
+}
+
+module.exports = { initDb };
